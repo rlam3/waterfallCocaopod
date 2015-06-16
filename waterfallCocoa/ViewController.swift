@@ -128,7 +128,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
 
         var newSize = CGSize(width: finalWith, height: finalHeight )
 
-        var someNewSize = someTextView.sizeThatFits(someTextView.frame.size)
         
         return newSize
     }

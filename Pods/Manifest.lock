@@ -1,0 +1,21 @@
+PODS:
+  - CollectionViewWaterfallLayout (0.2)
+
+DEPENDENCIES:
+  - CollectionViewWaterfallLayout (from `https://github.com/ecerney/CollectionViewWaterfallLayout.git`,
+    branch `master`)
+
+EXTERNAL SOURCES:
+  CollectionViewWaterfallLayout:
+    :branch: master
+    :git: https://github.com/ecerney/CollectionViewWaterfallLayout.git
+
+CHECKOUT OPTIONS:
+  CollectionViewWaterfallLayout:
+    :commit: 172d5d50d833b9ca845547fc718bfac9324c93c1
+    :git: https://github.com/ecerney/CollectionViewWaterfallLayout.git
+
+SPEC CHECKSUMS:
+  CollectionViewWaterfallLayout: 611bbea1e38d9cc01be9094e598465d08725ed9a
+
+COCOAPODS: 0.36.4

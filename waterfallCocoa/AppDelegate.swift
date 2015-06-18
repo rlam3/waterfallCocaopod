@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MAThemeKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let themeColor = MAThemeKit.colorWithHexString("00b89c")
+        
+        MAThemeKit.setupThemeWithPrimaryColor(themeColor, secondaryColor: UIColor.whiteColor(), fontName: "HelveticaNeue-Light", lightStatusBar: false)
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated:true)
+        
+        
         return true
     }
 

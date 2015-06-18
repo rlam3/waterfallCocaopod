@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCC74D9AABBC18035B940CF5"
-               BuildableName = "NilColorKit.framework"
-               BlueprintName = "Pods-waterfallCocoa-NilColorKit"
+               BlueprintIdentifier = "079193CF5AD941FF34CDE599"
+               BuildableName = "MAThemeKit.framework"
+               BlueprintName = "Pods-waterfallCocoa-MAThemeKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

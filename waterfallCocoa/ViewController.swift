@@ -23,13 +23,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
     // Obtain random image set with random width and heights
     lazy var imageSet: [UIImage] = {
         var _imageSet = [UIImage]()
-        for x in 0...5{
+        for x in 0...100{
             let array = [600,800,900]
             let array2 = [1000,1200,1400]
             let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
             let randomIndex2 = Int(arc4random_uniform(UInt32(array2.count)))
-            
-            let urlString:String = String(format: "http://lorempixel.com/%@/%@/", String(array[randomIndex]),String(array2[randomIndex2]))
+            let urlString:String = "http://localhost:5000/depot/media/2b2cd70f-0a3b-11e5-97bf-685b358e848d"
+            //let urlString:String = String(format: "http://lorempixel.com/%@/%@/", String(array[randomIndex]),String(array2[randomIndex2]))
             let image = UIImage(data: NSData(contentsOfURL: NSURL(string: urlString)!)!)
             print(urlString)
             print("\(x)\n")
@@ -46,8 +46,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         
         let layout = CollectionViewWaterfallLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10)
-        layout.headerInset = UIEdgeInsetsMake(100, 0, 0, 0)
-        layout.headerHeight = 50
+        layout.headerInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        layout.headerHeight = 100
         layout.footerHeight = 20
         layout.minimumColumnSpacing = 10
         layout.minimumInteritemSpacing = 10
@@ -94,7 +94,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         if let imageView = cell.contentView.viewWithTag(2) as? UIImageView {
             
             imageView.image = imageSet[indexPath.row]
-            
         
         }
         
@@ -108,9 +107,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         titleView.text = "Title"
         titleView.tag = 34
         titleView.textAlignment = .Center
-        titleView.backgroundColor = UIColor.darkGrayColor()
-        titleView.alpha = 0.85
-        titleView.textColor = UIColor.whiteColor()
+        titleView.backgroundColor = UIColor.whiteColor()
+        titleView.textColor = UIColor.darkGrayColor()
         cell.contentView.addSubview(titleView)
 
         
@@ -120,8 +118,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         
         cell.layer.addAnimation(animation, forKey: "opacity")
         
-        var x = UIColor.materialRed()
-        //cell.frame.size = CGSize(width: cell.bounds.width, height: cell.bounds.height)
+        cell.frame.size = CGSize(width: cell.bounds.width, height: cell.bounds.height)
         return cell
     }
     
@@ -169,13 +166,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         var collectionViewContentSize = thisLayout.collectionViewContentSize()
         print("collectionViewContentSize: \(collectionViewContentSize)\n\n\n")
 
-<<<<<<< HEAD
 
         return originalSize
-=======
-        
-        return newSize
->>>>>>> b969a266bd6889278795430bb24cc0154cc20ce8
     }
 
     

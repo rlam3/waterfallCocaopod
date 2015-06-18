@@ -1,16 +1,20 @@
 PODS:
   - CollectionViewWaterfallLayout (0.2)
+  - MAThemeKit (1.0)
   - NilColorKit (0.2.0)
 
 DEPENDENCIES:
   - CollectionViewWaterfallLayout (from `https://github.com/ecerney/CollectionViewWaterfallLayout.git`,
     branch `master`)
+  - MAThemeKit (from `https://github.com/mamaral/MAThemeKit`)
   - NilColorKit (from `https://github.com/NilStack/NilColorKit.git`, branch `master`)
 
 EXTERNAL SOURCES:
   CollectionViewWaterfallLayout:
     :branch: master
     :git: https://github.com/ecerney/CollectionViewWaterfallLayout.git
+  MAThemeKit:
+    :git: https://github.com/mamaral/MAThemeKit
   NilColorKit:
     :branch: master
     :git: https://github.com/NilStack/NilColorKit.git
@@ -19,12 +23,16 @@ CHECKOUT OPTIONS:
   CollectionViewWaterfallLayout:
     :commit: 172d5d50d833b9ca845547fc718bfac9324c93c1
     :git: https://github.com/ecerney/CollectionViewWaterfallLayout.git
+  MAThemeKit:
+    :commit: b99e933c15fa369b2ba0778d1125885acf955072
+    :git: https://github.com/mamaral/MAThemeKit
   NilColorKit:
     :commit: c7e049fc11c4980b329140f6aaacf18e2cac68ba
     :git: https://github.com/NilStack/NilColorKit.git
 
 SPEC CHECKSUMS:
   CollectionViewWaterfallLayout: 611bbea1e38d9cc01be9094e598465d08725ed9a
+  MAThemeKit: 559acc98ceadc051cccb1b6bb0c4ca28475eb021
   NilColorKit: f64bec81d847876ed706274b6c3ae8e47ee39916
 
 COCOAPODS: 0.36.4

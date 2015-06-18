@@ -7,6 +7,7 @@ use_frameworks!
 
 pod "CollectionViewWaterfallLayout", :git => 'https://github.com/ecerney/CollectionViewWaterfallLayout.git', :branch => 'master'
 pod "NilColorKit", :git => 'https://github.com/NilStack/NilColorKit.git', :branch => 'master'
+pod 'MAThemeKit', :git => 'https://github.com/mamaral/MAThemeKit'
 
 end
 

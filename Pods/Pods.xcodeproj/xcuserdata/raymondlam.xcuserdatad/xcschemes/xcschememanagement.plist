@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-waterfallCocoa-MAThemeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-waterfallCocoa-NilColorKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9A978220F14F3D910235A968</key>
+		<key>079193CF5AD941FF34CDE599</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B72E0F9A34A385F937CF923B</key>
+		<key>30514BE24E0DE8F7B7D224AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2EC28CCDB400905367D7A1A</key>
+		<key>C3F1FE135FC947C1D6D6D234</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CCC74D9AABBC18035B940CF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

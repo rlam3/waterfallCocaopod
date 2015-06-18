@@ -169,8 +169,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         var collectionViewContentSize = thisLayout.collectionViewContentSize()
         print("collectionViewContentSize: \(collectionViewContentSize)\n\n\n")
 
+<<<<<<< HEAD
 
         return originalSize
+=======
+        
+        return newSize
+>>>>>>> b969a266bd6889278795430bb24cc0154cc20ce8
     }
 
     

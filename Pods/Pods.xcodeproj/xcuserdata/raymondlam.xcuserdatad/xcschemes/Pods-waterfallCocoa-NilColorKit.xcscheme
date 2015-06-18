@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2EC28CCDB400905367D7A1A"
-               BuildableName = "CollectionViewWaterfallLayout.framework"
-               BlueprintName = "Pods-waterfallCocoa-CollectionViewWaterfallLayout"
+               BlueprintIdentifier = "9A978220F14F3D910235A968"
+               BuildableName = "NilColorKit.framework"
+               BlueprintName = "Pods-waterfallCocoa-NilColorKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

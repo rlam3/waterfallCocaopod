@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import CollectionViewWaterfallLayout
+import AVFoundation
+import NilColorKit
 
 
 class ViewController: UIViewController, UICollectionViewDataSource, CollectionViewWaterfallLayoutDelegate {
@@ -21,7 +23,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
     // Obtain random image set with random width and heights
     lazy var imageSet: [UIImage] = {
         var _imageSet = [UIImage]()
-        for x in 0...10{
+        for x in 0...5{
             let array = [600,800,900]
             let array2 = [1000,1200,1400]
             let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
@@ -79,18 +81,47 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! UICollectionViewCell
-        
-        if let label = cell.contentView.viewWithTag(1) as? UILabel {
-            
-            //label.text = String(stringInterpolationSegment: imageSet[indexPath.row].size)
-            label.text = "Label"
-        }
+//        
+//        if let label = cell.contentView.viewWithTag(1) as? UILabel {
+//            
+//            //label.text = String(stringInterpolationSegment: imageSet[indexPath.row].size)
+//            
+//            // Get title
+//            label.text = String(indexPath.row)
+//            
+//            
+//        }
         if let imageView = cell.contentView.viewWithTag(2) as? UIImageView {
-            //print(imageView.image!.size)
             
             imageView.image = imageSet[indexPath.row]
+            
+        
         }
         
+        
+        var titleHeight:CGFloat = 44
+        
+        //print("\(cell.bounds)")
+        var top = cell.bounds.height
+        
+        var titleView = UILabel(frame: CGRectMake(0, top-titleHeight, cell.bounds.width, titleHeight))
+        titleView.text = "Title"
+        titleView.tag = 34
+        titleView.textAlignment = .Center
+        titleView.backgroundColor = UIColor.darkGrayColor()
+        titleView.alpha = 0.85
+        titleView.textColor = UIColor.whiteColor()
+        cell.contentView.addSubview(titleView)
+
+        
+        var animation:CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "opacity")
+        animation.duration = 4.0
+        animation.autoreverses = true
+        
+        cell.layer.addAnimation(animation, forKey: "opacity")
+        
+        var x = UIColor.materialRed()
+        //cell.frame.size = CGSize(width: cell.bounds.width, height: cell.bounds.height)
         return cell
     }
     
@@ -120,23 +151,31 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         
         let thisLayout = layout as! CollectionViewWaterfallLayout
         
-
+        
+        
+        
         var globalImage = imageSet[indexPath.row]
+        print("\(indexPath.row)\n")
+        var originalSize = imageSet[indexPath.row].size
+        print("originalSize: \(originalSize)\n")
+//        
+//        var newHeight = globalImage.size.height+CGFloat(44)
+//        var newerSize = CGSize(width: globalImage.size.width, height: newHeight)
+//        
+//        print("newerSize: \(newerSize) \n")
         
-        var finalWith = globalImage.size.width
-        var finalHeight = globalImage.size.height
-
-        var newSize = CGSize(width: finalWith, height: finalHeight )
-
-        var someNewSize = someTextView.sizeThatFits(someTextView.frame.size)
         
-        return newSize
+
+        var collectionViewContentSize = thisLayout.collectionViewContentSize()
+        print("collectionViewContentSize: \(collectionViewContentSize)\n\n\n")
+
+
+        return originalSize
     }
 
     
 
     
-
 
 }
 

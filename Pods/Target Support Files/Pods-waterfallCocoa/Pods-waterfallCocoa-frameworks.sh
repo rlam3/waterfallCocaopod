@@ -49,7 +49,9 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'CollectionViewWaterfallLayout.framework'
+  install_framework 'NilColorKit.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'CollectionViewWaterfallLayout.framework'
+  install_framework 'NilColorKit.framework'
 fi

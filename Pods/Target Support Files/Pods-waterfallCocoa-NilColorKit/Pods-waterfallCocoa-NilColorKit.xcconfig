@@ -1,0 +1,1 @@
+PODS_WATERFALLCOCOA_NILCOLORKIT_OTHER_LDFLAGS = -framework "Foundation" -framework "UIKit"
